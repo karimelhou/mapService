@@ -12,6 +12,6 @@ import java.util.List;
 public interface MapRepo extends JpaRepository<MapEntity,Long> {
 
     @Query("SELECT a FROM MapEntity a WHERE a.logisticId = :logisticId")
-    List<MapEntity> findByLogisticId(@Param("userId") Long logisticId);
+    List<MapEntity> findByLogisticId(@Param("logisticId") Long logisticId);
 
 }
